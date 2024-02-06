@@ -13,10 +13,7 @@ import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
-import java.util.NoSuchElementException;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -97,7 +94,7 @@ public class FuncionarioService
 			final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 			final String dataNascimento = f.getDataNascimento().format(formatter);
 
-			final String salario = NumberFormat.getCurrencyInstance().format(f.getSalario());
+			final String salario = NumberFormat.getCurrencyInstance(new Locale("pt", "BR")).format(f.getSalario());
 
 			System.out.printf("Nome: %s - Data de Nascimento: %s - Idade: %s - Função: %s - Salário: %s%n",
 					f.getNome(), dataNascimento, Period.between(f.getDataNascimento(), LocalDate.now()).getYears(), f.getFuncao(), salario);
@@ -109,8 +106,6 @@ public class FuncionarioService
 		funcionarios.forEach(f -> {
 			final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 			final String dataNascimento = f.getDataNascimento().format(formatter);
-
-			final String salario = NumberFormat.getCurrencyInstance().format(f.getSalario());
 
 			System.out.printf("Nome: %s - Idade: %s%n",
 					f.getNome(), Period.between(f.getDataNascimento(), LocalDate.now()).getYears());

@@ -1,6 +1,6 @@
 INSERT INTO funcionario (id, nome, data_nascimento, salario, funcao)
 VALUES (1, 'Maria', '2000-10-18', 2009.44, 'Operador'),
-       (2, 'João', '1990-05-15', 2284.38, 'Operador'),
+       (2, 'João', '1990-05-12', 2284.38, 'Operador'),
        (3, 'Caio', '1961-05-02', 9836.14, 'Coordenador'),
        (4, 'Miguel', '1988-10-14', 19119.88, 'Diretor'),
        (5, 'Alice', '1995-01-05', 2234.68, 'Recepcionista'),

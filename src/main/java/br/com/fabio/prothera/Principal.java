@@ -21,8 +21,6 @@ public class Principal
 	private FuncionarioService funcionarioService;
 	@PostConstruct
 	public void init() {
-		NumberFormat.getInstance(new Locale("pt-br"));
-
 		System.out.println("-------------------------------------");
 
 		System.out.println("3.1 – Inserir todos os funcionários, na mesma ordem e informações da tabela acima");
